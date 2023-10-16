@@ -1,10 +1,11 @@
 FROM java:latest
 
-RUN 
+RUN git clone https://github.com/Mike12367/Suma.git
+
 
 WORKDIR /Suma
 
-COPY . /Suma/
+RUN jdk install
 
-CMD [ "npm", "start" ]
+CMD java 8 SumaMain.java
 
